@@ -16,6 +16,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="form.js"></script>
 
     <title>CHERUBTATS</title>
   </head>
@@ -30,7 +31,13 @@
       <div class="form">
         <h2>Fill out this form for a tattoo request</h2>
 
-        <form action="submit_page.php">
+        <form
+          name="myForm"
+          onsubmit="return validateForm()"
+          action="src/submit_page.php"
+          methhod="post"
+          required
+        >
           <!--AGE-->
           <h7
             >You must be 18+ years to receive a tattoo as this kind of service
